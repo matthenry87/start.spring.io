@@ -13,4 +13,9 @@ io.spring.start.site.extension.dependency.springrestdocs.SpringRestDocsProjectGe
 io.spring.start.site.extension.dependency.testcontainers.TestcontainersProjectGenerationConfiguration,\
 io.spring.start.site.extension.description.DescriptionProjectGenerationConfiguration,\
 io.spring.start.site.extension.code.groovy.GroovyProjectGenerationConfiguration,\
-io.spring.start.site.extension.code.kotlin.KotlinProjectGenerationConfiguration
+io.spring.start.site.extension.code.kotlin.KotlinProjectGenerationConfiguration,\
+io.spring.start.site.extension.build.BuildInfoProjectConfiguration,\
+io.spring.start.site.extension.dependency.lombok.LombokCustomizerConfig,\
+io.spring.start.site.extension.dependency.mapstruct.MapstructProjectGenerationConfiguration,\
+io.spring.start.site.extension.dependency.web.WebBuildCustomizerConfig,\
+io.spring.start.site.extension.code.java.ObjectMapperJava8TimeConfig

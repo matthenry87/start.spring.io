@@ -27,6 +27,16 @@ spring:
         use-last-modified: false
 
 initializr:
+  group-id:
+    value: com.worldpay
+  package-name:
+    value: com.worldpay.artifactname
+  artifact-id:
+    value: artifact-name
+  name:
+    value: artifact-name
+  description:
+    value: Insert description here
   env:
     boms:
       azure:
@@ -230,6 +240,36 @@ initializr:
         url: https://oss.sonatype.org/content/repositories/snapshots/
         snapshotsEnabled: true
   dependencies:
+    - name: Worldpay
+      content:
+        - name: Worldpay Logging
+          id: logging
+          description: Worldpay Enterprise Logging
+          groupId: com.matthenry87
+          artifactId: logging
+          version: 0.0.1-SNAPSHOT
+          starter: false
+        - name: Worldpay Exception Handling
+          id: exceptionhandling
+          description: Worldpay Enterprise Exception Handling
+          groupId: com.matthenry87
+          artifactId: exceptionhandling
+          version: 0.0.1-SNAPSHOT
+          starter: false
+        - name: Jasypt
+          id: jasypt
+          description: Encryption for sensitive properties
+          groupId: org.jasypt
+          artifactId: jasypt
+          version: 1.9.3
+          starter: false
+        - name: Mapstruct
+          id: mapstruct
+          description: Incredibly easy to use object/bean mapper
+          groupId: org.mapstruct
+          artifactId: mapstruct
+          version: 1.4.1.Final
+          starter: false
     - name: Developer Tools
       content:
         - name: Spring Boot DevTools
@@ -1511,9 +1551,9 @@ initializr:
       default: false
   javaVersions:
     - id: 15
-      default: false
-    - id: 11
       default: true
+    - id: 11
+      default: false
     - id: 1.8
       name: 8
       default: false
@@ -1527,13 +1567,6 @@ initializr:
     - name: Groovy
       id: groovy
       default: false
-  bootVersions:
-    - name : Latest SNAPSHOT
-      id: 2.2.0.BUILD-SNAPSHOT
-      default: false
-    - name : 2.1.1.
-      id: 2.1.1.RELEASE
-      default: true
 
 ---
 

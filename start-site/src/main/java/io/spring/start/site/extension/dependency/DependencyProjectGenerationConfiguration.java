@@ -84,14 +84,6 @@ public class DependencyProjectGenerationConfiguration {
 	}
 
 	@Bean
-	@ConditionalOnGradleVersion({ "4", "5", "6" })
-	@ConditionalOnBuildSystem(GradleBuildSystem.ID)
-	@ConditionalOnRequestedDependency("lombok")
-	public LombokGradleBuildCustomizer lombokGradleBuildCustomizer() {
-		return new LombokGradleBuildCustomizer(this.metadata);
-	}
-
-	@Bean
 	public SpringKafkaBuildCustomizer springKafkaBuildCustomizer() {
 		return new SpringKafkaBuildCustomizer();
 	}
